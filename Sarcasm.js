@@ -19,3 +19,23 @@ function altCaps(str){
 }
 
 console.log(altCaps("When you visit Portland you have to go to VooDoo Donuts"));
+
+
+// // example answer given
+
+// function altCaps(str){
+//     // assemble each character back into a new string
+//     let newStr = '';
+//     // loop through the string
+//     for(let i = 0; i < str.length; i++){
+//         // uppercase every character with an even index
+//         if(i % 2 === 0){
+//             newStr += str[i].toUpperCase();
+//         } else {
+//             newStr += str[i]
+//         }
+//     }
+//     return newStr;
+// }
+
+// console.log(altCaps("When you visit Portland you have to go to VooDoo Donuts"));
