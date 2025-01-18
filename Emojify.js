@@ -37,7 +37,12 @@ Example output: "elephant"
 */ 
 
 function emojifyWord(word){
-    return;
+    if (word.startsWith(':') && word.endsWith(':')){
+        const removedSemi = word.slice(1, -1);
+        return emojis[removedSemi] ? emojis[removedSemi] : removedSemi
+    }else {
+        return word;
+    }
 }
 
 /* 2. Write a function to find any emoji shortcodes in a phrase.
@@ -53,14 +58,18 @@ Example output: "I 💜 my elephant"
 */ 
 
 function emojifyPhrase(phrase){
-    return;
+    return phrase.split(' ')
+        .map(word => {
+            return emojifyWord(word)
+        })
+        .join(' ')
 }
 
 
 
-// console.log(emojifyWord(":heart:"));
-// console.log(emojifyWord(":flower:"));
-// console.log(emojifyWord("elephant"));
+console.log(emojifyWord(":heart:"));
+console.log(emojifyWord(":flower:"));
+console.log(emojifyWord("elephant"));
 
-// console.log(emojifyPhrase("I :heart: my :cat:"));
-// console.log(emojifyPhrase("I :heart: my :elephant:"));
+console.log(emojifyPhrase("I :heart: my :cat:"));
+ console.log(emojifyPhrase("I :heart: my :elephant:"));
