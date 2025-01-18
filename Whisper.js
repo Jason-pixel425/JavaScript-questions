@@ -14,7 +14,7 @@ Hint: endsWith and slice
 */
 
 function whisper(str){
-    return str.endsWith("!") ? "shh... " + str.slice(0, -1).toLowerCase() + "." :  "shh... " + str.toLowerCase()
+    return str.endsWith("!") ? `shh... ${str.slice(0, -1).toLowerCase()}.` :  `shh... ${str.toLowerCase()}`
 }
 
 console.log(whisper("PLEASE STOP SHOUTING."));
