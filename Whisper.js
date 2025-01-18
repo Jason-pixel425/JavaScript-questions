@@ -19,3 +19,16 @@ function whisper(str){
 
 console.log(whisper("PLEASE STOP SHOUTING."));
 console.log(whisper("MA'AM, this is a Wendy's!")); 
+
+// Example solution
+
+// function whisper(str){
+//     if(str.endsWith("!")){
+//         // scrimba!
+//         return "shh... " + str.slice(0, str.length - 1).toLowerCase();
+//     }
+//     return "shh... " + str.toLowerCase();
+// }
+
+// console.log(whisper("PLEASE STOP SHOUTING."));
+// console.log(whisper("MA'AM, this is a Wendy's!"));
