@@ -23,3 +23,30 @@ console.log(isPalindrome("civic"));
 console.log(isPalindrome("octopus"));
 console.log(isPalindrome("pumpkins"));
 console.log(isPalindrome("madam"));
+
+
+// Scrimba Solution
+/*
+// Solution 1: for loop 
+function isPalindrome(str){
+    // reverse the word using a backward for loop to create a new string
+    let reverseStr = "";
+    
+    for(let i = str.length - 1; i >= 0; i--){
+        reverseStr += str[i];
+    }
+
+    // compare the new string to the original word - are they equal? 
+        // yes - return true
+        // no - return false
+    return reverseStr === str;
+}
+
+// Test your function
+console.log(isPalindrome("abba"));
+console.log(isPalindrome("civic"));
+console.log(isPalindrome("octopus"));
+console.log(isPalindrome("pumpkins"));
+console.log(isPalindrome("madam"));
+
+*/
