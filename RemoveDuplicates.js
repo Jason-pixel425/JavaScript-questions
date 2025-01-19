@@ -14,7 +14,12 @@ Example output: "abc12"
 const password = "9338dsabbbadjdjdj2sdfdfdf282ff8fdsd888ss8cfgfg332q23"; 
  
 function removeDupeChars(chars){
-    
+    const charsArr = password.split('')
+    const newArr = []
+    charsArr.map(letter => {
+            !newArr.includes(letter) ? newArr.push(letter) : null  
+    })
+    return newArr.join('')
 }
 
 console.log(removeDupeChars(password));
