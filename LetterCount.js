@@ -14,8 +14,25 @@ lowercase t and a capital T should be considered the same character).
 
 */ 
 
-function countChars(str){
-   
-}
+// function countChars(str){
+//    const countObj = {}
+//    const removedSpacesStr = str.replace(/\s/g, '').toLowerCase();
+//    removedSpacesStr.split('').map(letter => {
+//         countObj[letter] ? countObj[letter] += 1 : countObj[letter] = 1
+//    })
+//    return countObj
+// }
 
-console.log(countChars("Peggy Porth"));
+
+// This was me trying to get it as optimal as possible. The first attempt was entirelly my own
+// This attempt was after researching and understanding the reduce method more.
+// It is more efficient as it does not unncessarily create an array, object etc just to be unused 
+
+function countChars(str){
+    return str.replace(/\s/g, '').toLowerCase().split('').reduce((countObj, letter) => {
+        countObj[letter] = (countObj[letter] || 0) + 1;
+        return countObj;
+    }, {});
+ }
+
+console.log(countChars("Jason Michael Fitzgerald"));
