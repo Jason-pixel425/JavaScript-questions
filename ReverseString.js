@@ -41,3 +41,35 @@ function reverseStringsInArray(arr){
 
 console.log(reverseString(title));
 console.log(reverseStringsInArray(messages));
+
+// Scrimba Solution
+
+// const title = ":htraE no od ot ffutS";
+// const messages = [
+//             "maerc eci yrT",
+//             "rewoT leffiE tisiV",
+//             "noom eht ot snamuh etacoleR",
+//             "egrahc ni stac tuP", 
+//         ]
+
+
+// // reverse a string manually
+// function reverseString(str){
+//    // initialize a new empty string
+//    let reversedString = "";
+//    // loop through original string backwards, adding each character to the new string
+//    for(let i = str.length - 1; i >= 0; i--){
+//        reversedString += str[i];
+//    }
+//    return reversedString
+// }
+
+
+
+
+// function reverseStringsInArray(arr){
+//     return arr.map(item => reverseString(item));
+// }
+
+// console.log(reverseString(title));
+// console.log(reverseStringsInArray(messages));
