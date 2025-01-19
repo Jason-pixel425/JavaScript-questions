@@ -16,7 +16,15 @@ Example output: false
 */ 
 
 function isAnagram(str1, str2){
-
+    const str1Sorted = str1.split('').sort().join('');
+    const str2Sorted = str2.split('').sort().join('');
+    if (str1Sorted.length !== str2Sorted.length){
+        return false
+    }  else if (str1Sorted === str2Sorted){
+        return true
+    } else {
+        return false
+    }
 }
 
 console.log(isAnagram("allergy", "gallery"));
