@@ -21,7 +21,16 @@ Expected output:
 */
 
 function getFreePodcasts(data){
-   
+   const freePodcastArr = data.filter(item => {
+    return item.paid === false
+   })
+   return freePodcastArr.map(item => {
+    return {
+        title : item.title,
+        rating: item.rating,
+        paid: item.paid
+    }
+   })
 }
 
 console.log(getFreePodcasts(podcasts))
