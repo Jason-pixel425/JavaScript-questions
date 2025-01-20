@@ -38,3 +38,27 @@ function flatten(arr){
 
 console.log(flatten(kittyPrizes));
 console.log(flatten(kittyScores));
+
+
+//Srimba solution
+// function flatten(arr){
+//     // initialize a new, empty array
+//     // loop through the passed in array and check - string or array? 
+//         // if the item is string, push into the new array
+//         // if the item is an array, loop through it, pushing each item into the array
+//     // return new array
+    
+//     const newArr = [];
+    
+//     arr.forEach(element => {
+//         if(Array.isArray(element)){
+//             element.forEach(item => newArr.push(item))
+//         } else {
+//             newArr.push(element);
+//         }
+//     });
+//     return newArr;
+// }
+
+// // console.log(flatten(kittyPrizes));
+// console.log(flatten(kittyScores));
