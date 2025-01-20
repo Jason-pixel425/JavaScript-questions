@@ -18,7 +18,7 @@ import products from "./Data/candyData.js";
 */
 
 function getSaleItems(data){
-    return data.filter(product => product.type === "sweet").map(item => {return {item: item.item, price: item.price}})
+    return data.filter(product => product.type === "sweet").map(({item, price}) => {return {item, price}})
     
 };
 
