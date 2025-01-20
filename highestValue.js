@@ -20,7 +20,9 @@ const gameNightFood = {
 }
 
 function findTheWinner(obj){
-
+    let valueArr = Object.values(obj)
+    // return valueArr.reduce((highestValue, value) => highestValue < value ? value : highestValue, 0)
+    return Math.max(...valueArr)
 }
 
 console.log(findTheWinner(gameNightFood));
