@@ -17,7 +17,8 @@ import products from "./Data/holidayGiftData.js";
 */
 
 function sortProducts(data){
-    return data.sort((productValue, productCompare) => productValue.price - productCompare.price)
+    const sortedByPrice = data.sort((productValue, productCompare) => productValue.price - productCompare.price )
+    return sortedByPrice.map(product => `${product.item}, ${product.price}`)
 }
 
 const listByCheapest = sortProducts(products);
