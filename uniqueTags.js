@@ -1,4 +1,4 @@
-import mediaData from "./data.js";
+import movieData from "./Data/movieData.js";
 
 /* Find All Unique Tags 
 
