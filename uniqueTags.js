@@ -17,8 +17,11 @@ Expected output:
 */ 
 
 function getUniqueTags(data){
- 
+    const movieTags = data.map(movie => {
+        return movie.tags
+    }).flat()
+    return [...new Set(movieTags)]
 }
 
-console.log(getUniqueTags(mediaData));
+console.log(getUniqueTags(movieData));
 
