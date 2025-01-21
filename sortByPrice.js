@@ -1,4 +1,4 @@
-import products from "./data.js";
+import products from "./Data/holidayGiftData";
 
 /*
     You're online shopping for holiday gifts, but money is tight
