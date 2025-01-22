@@ -23,3 +23,21 @@ function calcAverageLikes(data){
 
 
 console.log(calcAverageLikes(postData))
+
+/*
+Scrimba Solution
+
+function calcAverageLikes(data){
+  // reduce to single total
+  const total = data.reduce((acc, curr)=> {
+      // add curr.likes to acc
+      return acc += curr.likes
+  }, 0);
+  // divide the total by data.length to get the avg 
+  return total / data.length;
+} 
+
+
+console.log(calcAverageLikes(postData))
+
+*/
