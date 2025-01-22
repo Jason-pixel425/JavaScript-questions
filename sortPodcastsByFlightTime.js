@@ -25,7 +25,43 @@ each podcast to the console, like this:
 */
 
 function sortByDuration(data, flightLength){
-  
+    const ascOrder = data.sort((a, b) => a.duration - b.duration)
+    if (flightLength > 60){
+        ascOrder.reverse()
+    }
+    ascOrder.forEach(podcast => {
+        console.log(`${podcast.title}, ${podcast.duration} minutes`)
+    })
 }
 
 sortByDuration(podcasts, 60);
+sortByDuration(podcasts, 80);
+
+
+/*
+Scrimba solution
+
+
+function sortByDuration(data, flightLength){
+
+      // Check if flight is greater than 60 minutes
+      if(flightLength > 60){
+          // if yes, sort decending order (longest to shortest)
+          data.sort((a,b) => b.duration - a.duration);
+      } else {
+          data.sort((a,b) => a.duration - b.duration);
+      }
+     // loop through my sorted array
+     data.forEach(({title, duration}, index) => {
+         // construct a string using the title and duration props 
+        // use the index to number the list
+        // console.log each item
+         console.log(`${index + 1}. ${title}, ${duration} minutes`);
+     });
+
+
+}
+
+sortByDuration(podcasts, 61);
+
+*/
