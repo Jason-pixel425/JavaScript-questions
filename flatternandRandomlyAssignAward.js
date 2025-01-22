@@ -34,3 +34,34 @@ function assignAwards(data){
 
 console.log(getHosts(podcasts));
 console.log(assignAwards(podcasts));
+
+
+/*
+Scrimba solution
+
+function getHosts(data){
+   // reduce the podcasts data down to a list of hosts
+   return data.reduce((acc, curr)=>{
+       // add curr.hosts to the acc array
+       return acc.concat(curr.hosts);
+   }, [])
+}
+
+function assignAwards(data){
+    // use getHosts() to get a flat array of podcasts hosts
+    const hosts = getHosts(data);
+    // map through my array of hosts. for each:
+    return hosts.map(host => {
+         // use Math.random to generate a rand num between 0 and length of award arr
+         const randIndex = Math.floor(Math.random() * awards.length); 
+        // use the rand num to access a random award index
+        // use string literal to concast a random award to each host 
+        return `${awards[randIndex]} ${host}`;
+    });   
+}
+
+
+//console.log(getHosts(podcasts));
+console.log(assignAwards(podcasts));
+
+*/
