@@ -1,4 +1,4 @@
-import podcasts from "./data.js";
+import podcasts from "./Data/podcastData.js";
 
 /* 🌴 Save the Weekend 🌴
 
@@ -33,7 +33,37 @@ Example description: "Coding Corner is a 55 minute education podcast hosted by T
 */ 
 
 function createDescriptionsFor(data){
-   
+   return data.map(podcast => {
+    return {
+        ...podcast,
+        description : `${podcast.title} is a ${podcast.duration} minute ${podcast.genre} podcast hosted by ${podcast.hosts.join(', ')}.`
+
+    }
+   })
 }
 
 console.log(createDescriptionsFor(podcasts))
+
+/*
+Srimba solution
+
+
+function createDescriptionsFor(data){
+    // map through the data
+    return data.map(podcast => {
+        const {title, duration, genre, hosts} = podcast;
+        // use title, duration, genre and host data to make description
+        // for each podcast object, add description prop
+        return {
+            ...podcast,
+            description: `${title} is a ${duration} minute ${genre} podcast hosted 
+            by ${hosts[0]}.`
+        };
+    })
+        
+        
+}
+
+console.log(createDescriptionsFor(podcasts))
+
+*/
