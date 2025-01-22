@@ -15,7 +15,10 @@ by the total number of posts.
 */
 
 function calcAverageLikes(data){
-  
+  const totalLikes = data.reduce((total, currentValue) => {
+    return total + currentValue.likes
+  }, 0)
+  return (totalLikes / data.length).toFixed(2)
 } 
 
 
